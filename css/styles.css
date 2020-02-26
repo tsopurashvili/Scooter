@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 30%;
+}
+
+p {
+    margin-left: 1em;
+    line-height: 1.5em;
+}
+
+.clearfix::after,
+section::after,
+footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* column system */
+
+[class^=col-] {
+    width: 100%;
+    margin-top: 1em;
+}
+
+@media (min-width: 550px) {
+
+    [class^=col-] {
+        float: left;
+        padding: 0 .5em;
+        margin-top: 0;
+    }
+
+    .col-3 {
+        width: 50%;
+    }
+    
+    .col-1 {
+        width: 16.6666%;
+    }
+}
+
+/* header */
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 1em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: .5em;
+}
+
+nav a {
+    font-weight: 900;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5em;
+    color: #FFF;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #00ff6c;
+}
+
+/* typography */
+
+.title {
+    font-size: 2.5rem;
+}
+
+.title span {
+    font-weight: 300;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.title-cta {
+    margin: 0 0 .5em;
+}
+
+.unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* button */
+
+.button {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid;
+    padding: .2em .4em;
+}
+
+.button-accent {
+    color: #00ff6c;
+    border-color: #00ff6c;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+    background: #00ff6c;
+    color: #232323;
+}
+
+.button-small {
+    font-size: .9rem;
+}
+
+.button-dark {
+    color: #232323;
+    border-color: #232323;
+}
+
+.button-dark:hover,
+.button-dark:focus {
+    background: #232323;
+    color: #00ff6c;
+}
+
+/* home hero */
+
+.home-hero {
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10em 0;
+    color: #FFF;
+}
+
+/* home-about */
+
+.home-about-textbox {
+    background: #232323;
+    padding: 3em;
+    width: 110%;
+    margin-left: -5%;
+    outline: 2px solid #00ff6c;
+    outline-offset: -3em;
+    color: #FFF;
+    position: relative;
+    text-align: left;
+}
+
+.home-about-textbox h1 {
+    color: #00ff6c;
+    position: absolute;
+    top: .5em;
+    padding: 0 .145em;
+    background: #232323;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* portfolio */
+
+.portfolio {
+    margin: 3em 0 0;
+}
+
+.port-item img {
+    display: block;
+}
+
+.port-item {
+    margin: 0;
+    position: relative;
+}
+
+.port-desc {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #FFF;
+    background: rgba(0,0,0,.6);
+    padding-bottom: 1em;
+}
+
+@media (min-width: 350px) {
+    .port-item {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 700px) {
+    .port-item {
+        width: 33.3333334%;
+        overflow: hidden;
+    }
+
+    .port-desc {
+        transform: translateY(150%);
+    }
+
+    .port-item:hover .port-desc {
+        transform: translateY(0%);
+    }
+}
+
+/* cta */
+
+.cta {
+    background: #00ff6c;
+    padding: 3em 0;
+}
+
+/* footer */
+
+footer {
+    background: #232323;
+    color: #FFF;
+    text-align: left;
+    padding: 5em 0;
+}
+
+/* responsive */
+
+@media (min-width: 600px) {
+    .logo {
+        float: left;
+    }
+
+    nav {
+        float: right;
+    }
+}
+
+@media (min-width: 800px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .home-hero {
+        height: 100vh;
+        padding-top: 35vh;
+    }
+}
+
+@media (min-width: 600px) {
+    .button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .home-about {
+        background-image: url(../img/about.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 5em;
+    }
+    .home-about-textbox {
+        width: 50%;
+        margin-left: 2.5em;
+    }
+}
